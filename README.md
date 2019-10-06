@@ -1,3 +1,8 @@
+DEPENDENCIAS A INSTALAR
+npm i prop-types
+npm i react-weathericons
+npm i @material-ui/core
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
