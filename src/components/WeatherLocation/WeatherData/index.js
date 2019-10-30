@@ -1,10 +1,7 @@
 import React from 'react';
 import WeatherExtraInfo from './WeatherExtraInfo';
 import WeatherTemperature from './WeatherTemperature';
-import './styles.css';
-import {
- WINDY, RAIN,
-} from './../../../constants/weathers';
+
 
 //Es lo mismo usar las dos líneas comentadas que la primera sin comentar, aunque en la primera opción habría que usar llaves e indicar el return y en la segunda no
 // const WeatherData = ({ data }) => {

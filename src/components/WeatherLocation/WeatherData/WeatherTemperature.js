@@ -1,7 +1,7 @@
 import React from 'react';
 import WeatherIcons from 'react-weathericons';
 import PropTypes from 'prop-types';
-import './styles.css';
+// import './styles.css';
 
 import {
     CLOUDY,
@@ -17,7 +17,7 @@ const icons = {
     [CLOUDY]: "cloudy",
     [RAIN]:"rain",
     [SNOW]: "snow",
-    [THUNDER]: "day-thunderstore",
+    [THUNDER]: "day-thunderstorm",
     [DRIZZLE]: "day-showers"
 };
 

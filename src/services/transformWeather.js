@@ -9,30 +9,38 @@ import {
 } from './../constants/weathers';
 
 const getWeatherState = weather => {
-    const { id }= weather;
+    const { id } = weather;
+    let weatherState;
 
     switch (id) {
         case id < 300:
-            return THUNDER;
+            weatherState = THUNDER;
+            break;
         case id < 400:
-            return DRIZZLE;
+            weatherState = DRIZZLE;
+            break;
         case id < 600:
-            return RAIN;
+            weatherState = RAIN;
+            break;
         case id < 700:
-            return SNOW;
-        case id < 800:
-            return SUN;
+            weatherState = SNOW;
+            break;
+        case 800:
+            weatherState = SUN;
+            break;
         default:
-            return CLOUDY;
-    }   
+            weatherState = CLOUDY;
+    }
+
+    return weatherState;
 }
 
 const transformWeather = weather_data => {
-    const { humidity, temp } = weather_data.main;
+    const { humidity } = weather_data.main;
     const { speed } = weather_data.wind;
+    const temperature = weather_data.main.temp.toFixed(2);
     const name = weather_data.name;
     const weatherState = getWeatherState(weather_data.weather[0]);
-    const temperature = temp;
 
     const data = {
         humidity,

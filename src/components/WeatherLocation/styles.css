@@ -1,5 +1,5 @@
 .weatherLocationCont {
-    width: 400px;
+    width: 100%;
     margin: auto;
     padding: 15px;
     font-family: 'Roboto', sans-serif;
@@ -19,4 +19,11 @@
     line-height: 35px;
 }
 
+@media (max-width: 64em) {
+    .locationList {
+        max-height: 50vh;
+        overflow: auto;
+        margin-bottom: 20px;
+    }
+}
 

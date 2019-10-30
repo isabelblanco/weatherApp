@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import transformWeaher from './../../services/transformWeather';
 import Location from './Location';
 import WeatherData from './WeatherData';
-import './styles.css';
+// import './styles.css';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { PropTypes } from 'prop-types';
 import getUrlWeatherByCity from '../../services/getUrlWeatherByCity';
@@ -52,7 +52,7 @@ class WeatherLocation extends Component {
         }).then(data => {
             const newWeather = transformWeaher(data);
             console.log(newWeather);
-            //setState es palabra clave para modernizar el objeto que se declara en el constructor. Sin este método no podemos actualizar correctamente.
+            //setState es palabra clave para actualizar el objeto que se declara en el constructor. Sin este método no podemos actualizar correctamente.
             this.setState({
                 data: newWeather,
             });
